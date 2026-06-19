@@ -2,7 +2,7 @@ from sqlalchemy import create_engine
 
 def load_data(df):
     engine = create_engine(
-        "postgresql://postgres:Draconic@localhost:5432/netflix_db"
+        "postgresql://airflow:airflow@postgres:5432/airflow"
     )
     
     df.to_sql(
